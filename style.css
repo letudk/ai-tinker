@@ -1,9 +1,9 @@
 /*!
-Theme Name: ToMau123
-Theme URI: https://tomau123.com
+Theme Name: AITINKER
+Theme URI: https://ai-tinker.net
 Author: LTDEV
-Author URI: https://tomau123.com
-Description: tomau123
+Author URI:  https://ai-tinker.net
+Description: AITINKER
 Version: 1.0
 Tested up to: 6.1
 Requires PHP: 7.4
@@ -2947,3 +2947,89 @@ figcaption.wp-caption-text {
 
 
 
+.category-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.category-description {
+    font-size: 16px;
+    color: #666;
+}
+
+.post-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.post-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.post-item:hover {
+    transform: translateY(-5px);
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.post-content {
+    padding: 15px;
+}
+
+.post-title {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.post-title a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post-excerpt {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    font-size: 14px;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background: #0073aa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.pagination a:hover {
+    background: #005177;
+}

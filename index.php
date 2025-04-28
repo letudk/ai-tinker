@@ -10,16 +10,11 @@ global $smartkid_options; ?>
 <?php dynamic_sidebar( 'sidebar-7' ); ?>
 </div>
 <?php } ?>
-<div class="container">
-	<h1 style="margin: 20px 0px;" >Tải Tranh Tô Màu Miễn Phí – Khơi Gợi Sáng Tạo Cho Bé!</h1>
-	<p>Chào mừng bạn đến với Tải Tranh Tô Màu – kho tranh tô màu miễn phí dành cho bé! 🌈🎨 Tại đây, bạn có thể tải xuống hàng trăm mẫu tranh tô màu đa dạng, phù hợp với từng độ tuổi và sở thích của trẻ. Từ những nhân vật hoạt hình đáng yêu, động vật ngộ nghĩnh đến phương tiện giao thông và thế giới thiên nhiên, bé sẽ thỏa sức sáng tạo và phát triển tư duy qua từng bức tranh.</p>
-	<div style="font-size:14px; margin: 10px 0;">
-		<p  style="margin:5px;">✅ Tranh tô màu chất lượng cao, miễn phí tải về</p>
-		<p style="margin:5px;">✅ Phân loại theo chủ đề, dễ dàng tìm kiếm</p>
-		<p style="margin:5px;">✅ Cập nhật tranh mới liên tục</p>
-	</div>
-	<p style= "font-style: italic;">Hãy cùng bé khám phá thế giới sắc màu ngay hôm nay! 🚀✨</p>
+<div class="container" style="text-align: center;">
+	<h1 style="margin: 20px 0px;" >AI TINKER</h1>
+	<p>Explore the Power of AI — One Tool at a Time.</p> 
 </div>
+
 <div class="container stick-post">
 	<?php
 	 $args = array(
