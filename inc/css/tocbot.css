@@ -1,0 +1,77 @@
+a.toc-link.node-name--H1 {
+    display: block;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.toc
+{
+   overflow-y:auto
+}
+
+.toc>.toc-list
+{
+   overflow:hidden;
+   position:relative;
+   line-height: 1.6;
+   font-size: 14px;
+}
+
+.toc>.toc-list li
+{
+   list-style:circle;
+   line-height: 1.3;
+   margin-left: 18px;
+}
+
+.toc-list
+{
+   margin:0;
+   padding-left:10px
+}
+a.toc-link
+{
+   color:var(--text);
+   height:100%
+}
+
+.is-collapsible
+{
+   max-height:1000px;
+   overflow:hidden;
+   transition:all 300ms ease-in-out
+}
+
+.is-collapsed
+{
+   max-height:0
+}
+
+.is-position-fixed
+{
+   position:fixed!important;
+   top:0
+}
+
+.is-active-link
+{
+   font-weight:700;
+   color:var(--texta)!important
+}
+
+.toc-link::before
+{
+   background-color:var(--menu);
+   content:' ';
+   display:inline-block;
+   height:inherit;
+   left:0;
+   margin-top:-1px;
+   position:absolute;
+   width:2px
+}
+
+.is-active-link::before
+{
+   background-color:var(--texta);
+}

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('BeVietnamPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('BeVietnamPro-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('BeVietnamPro-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BeVietnamPro';
+    src: url('BeVietnamPro-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
