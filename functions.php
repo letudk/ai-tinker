@@ -429,3 +429,85 @@ function convert_image_to_webp_except_png_and_webp($upload) {
     return $upload;
 }
 
+// Thêm metabox
+function add_ai_meta_box() {
+    add_meta_box(
+        'ai_meta_box',
+        'AI INFOMATIONS',
+        'render_ai_meta_box',
+        'post', // Thay bằng custom post type nếu cần
+        'normal',
+        'default'
+    );
+}
+add_action('add_meta_boxes', 'add_ai_meta_box');
+
+// Hiển thị metabox
+function render_ai_meta_box($post) {
+    $ai_url = get_post_meta($post->ID, '_ai_url', true);
+    $favicon_url = get_post_meta($post->ID, '_favicon_url', true);
+    $ai_type = get_post_meta($post->ID, '_ai_type', true);
+
+    ?>
+    <p>
+        <label for="ai_url">AI URL:</label><br>
+        <input type="url" name="ai_url" id="ai_url" value="<?php echo esc_attr($ai_url); ?>" style="width:100%;" />
+    </p>
+    <p>
+        <label for="favicon_url">Favicon URL:</label><br>
+        <input type="url" name="favicon_url" id="favicon_url" value="<?php echo esc_attr($favicon_url); ?>" style="width:100%;" readonly />
+    </p>
+    <p>
+        <label for="ai_type">AI TYPE:</label><br>
+        <select name="ai_type" id="ai_type">
+            <option value="FREE" <?php selected($ai_type, 'FREE'); ?>>FREE</option>
+            <option value="FREEMIUM" <?php selected($ai_type, 'FREEMIUM'); ?>>FREEMIUM</option>
+            <option value="PAID" <?php selected($ai_type, 'PAID'); ?>>PAID</option>
+            <option value="FREE TRIAL" <?php selected($ai_type, 'FREE TRIAL'); ?>>FREE TRIAL</option>
+        </select>
+    </p>
+    <?php
+}
+
+function save_ai_meta_data($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    if (!current_user_can('edit_post', $post_id)) return;
+
+    // Lưu AI URL và AI TYPE
+    if (isset($_POST['ai_url'])) {
+        $ai_url = esc_url_raw($_POST['ai_url']);
+        update_post_meta($post_id, '_ai_url', $ai_url);
+
+        // Lấy favicon
+        $favicon_url = get_favicon_from_url($ai_url, $post_id);
+        if ($favicon_url) {
+            update_post_meta($post_id, '_favicon_url', $favicon_url);
+        }
+    }
+
+    if (isset($_POST['ai_type'])) {
+        update_post_meta($post_id, '_ai_type', sanitize_text_field($_POST['ai_type']));
+    }
+}
+add_action('save_post', 'save_ai_meta_data');
+
+// Hàm lấy favicon từ trang web
+function get_favicon_from_url($url, $post_id) {
+    $domain = parse_url($url, PHP_URL_HOST);
+    $favicon_url = "https://www.google.com/s2/favicons?sz=64&domain=" . $domain;
+
+    $upload_dir = wp_upload_dir();
+    $folder = $upload_dir['basedir'] . '/ai-favicon/';
+    $filename = sanitize_title($domain) . '.webp';
+
+    if (!file_exists($folder)) {
+        wp_mkdir_p($folder);
+    }
+
+    $image_data = wp_remote_get($favicon_url);
+    if (is_wp_error($image_data) || empty($image_data['body'])) return false;
+
+    file_put_contents($folder . $filename, $image_data['body']);
+
+    return $upload_dir['baseurl'] . '/ai-favicon/' . $filename;
+}

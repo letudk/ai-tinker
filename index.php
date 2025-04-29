@@ -13,58 +13,7 @@ global $smartkid_options; ?>
 <div class="container" style="text-align: center;">
 	<h1 style="margin: 20px 0px;" >AI TINKER</h1>
 	<p>Explore the Power of AI — One Tool at a Time.</p> 
-</div>
-
-<div class="container stick-post">
-	<?php
-	 $args = array(
-		'meta_query' => array(
-			array(
-				'key'     => '_stick_post',
-				'value'   => '1',
-				'compare' => '='
-			)
-		),
-		'ignore_sticky_posts' => 1,
-		'posts_per_page' => 1,
-		'post_status' => 'publish'
-	);
-	$the_query = new WP_Query( $args );
-	if ( $the_query->have_posts() ) {
-		while ( $the_query->have_posts() ) {
-			$the_query->the_post();
-			?>
-<div class="stick-post-item">
-        <div class="stick-post-img">
-            <?php if (has_post_thumbnail()) : ?>
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('medium'); ?>
-                </a>
-            <?php endif; ?>
-        </div>
-        
-        <div class="stick-post-content">
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <ol class="print-steps">
-                <li><strong>Bước 1:</strong> Click vào hình ảnh trong bài viết</li>
-                <li><strong>Bước 2:</strong> Tại đây popup hiện ra, phụ huynh có thể cho bé tô màu online hoặc bấm vào nút in hình trắng đen</li>
-                <li><strong>Bước 3:</strong> Đợi 5s chọn máy in -> định dạng lại khổ giấy</li>
-                <li><strong>Bước 4:</strong> In hình</li>
-            </ol>
-        </div>
-    </div>
-			<?php
-		}
-		wp_reset_postdata();
-	} else {
-		echo '<div class="box-card" style="grid-column:1;">
-				<div class="box-content" style="text-align: center !important;">
-					'. __('Hình ảnh đang được cập nhật, Chúng tôi sẽ cố gắng bổ sung sớm nhất có thể...', 'smartkid') .'
-				</div>
-			</div>';
-	}
-	?>
-</div>
+</div> 
 <main class="aos-all">
 <!-- widget midel top -->
 <?php if ( is_active_sidebar('sidebar-5') && is_home() && !is_paged()) { ?>
