@@ -14,6 +14,13 @@ global $smartkid_options; ?>
 	<h1 style="margin: 20px 0px;" >AI TINKER</h1>
 	<p>Explore the Power of AI — One Tool at a Time.</p> 
 </div> 
+
+<div class="container" style="margin-bottom:20px;">
+<?php
+	get_template_part( 'template-parts/feature-post'); 
+?>
+ 
+</div> 
 <main class="aos-all">
 <!-- widget midel top -->
 <?php if ( is_active_sidebar('sidebar-5') && is_home() && !is_paged()) { ?>
@@ -54,13 +61,7 @@ global $smartkid_options; ?>
 					));
     			$nav = str_replace('<h2 class="screen-reader-text">1</h2>', '', $nav);
     			echo $nav;
-                endif;
-                // chuyen trang dạng số
-			else : ?> 
-				<div class="box-card" style="grid-column:1 / span 4;">
-				<div class="box-content" style="text-align: center !important;">
-					<?php _e('Hình ảnh đang được cập nhật, Chúng tôi sẽ cố gắng bổ sung sớm nhất có thể...', 'smartkid'); ?>
-				</div>
+                endif;  ?>  
 			</div>
 			 <?php
 			endif; ?>
@@ -79,6 +80,7 @@ global $smartkid_options; ?>
 	
 </div> 
 </main>
+
 <!-- full bottom -->
 <?php if (isset($smartkid_options['other1']) && is_active_sidebar('sidebar-8') && is_home() && !is_paged()) { ?>
 <div class="full-bottom ">

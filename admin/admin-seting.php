@@ -255,28 +255,8 @@ function smartkid_options_page() {
                     <span class="slider"></span></label>
 					<label class="admin-label-right"><?php _e('Hiển thị popup bài viết ngẫu nhiên', 'smartkid'); ?></label>
 					<div class="admin-cum">
-					<p>
-						
-						<input placeholder="<?php _e('Số bài', 'smartkid'); ?>" style="width:90px;height:40px" name="smartkid_settings[web51]" type="number" value="<?php if(!empty($smartkid_options['web51'])){echo $smartkid_options['web51'];} ?>"/>
-						<select name="smartkid_settings[web52]" style="height:40px;width:90px;">
-						<option <?php $style = 'default'; if($smartkid_options['web52'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?> value="default" <?php echo $selected; ?>>Default</option>
-						<?php if(isset($smartkid_options['type']) && $smartkid_options['type'] == 'Land') { ?><option <?php $style = 'land'; if($smartkid_options['web52'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?> value="land" <?php echo $selected; ?>>Land</option><?php } ?>
-						<?php if(isset($smartkid_options['type']) && $smartkid_options['type'] == 'Shop') { ?><option <?php $style = 'shop'; if($smartkid_options['web52'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?> value="shop" <?php echo $selected; ?>>Shop</option><?php } ?> 
-						<?php if(isset($smartkid_options['type']) && $smartkid_options['type'] == 'Codex') { ?><option <?php $style = 'codex'; if($smartkid_options['web52'] == $style) { $selected = 'selected="selected"'; 
-						} else { $selected = ''; } ?> value="codex" <?php echo $selected; ?>>Codex</option><?php } ?> 
-						<?php if(isset($smartkid_options['type']) && $smartkid_options['type'] == 'Youtube') { ?><option <?php $style = 'youtube'; if($smartkid_options['web52'] == $style) { $selected = 'selected="selected"'; 
-						} else { $selected = ''; } ?> value="youtube" <?php echo $selected; ?>>Youtube</option><?php } ?>
-						</select>
-						
-					</p>	
-                    <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Sau khi bật sẽ có popup hiển thị danh sách bài viết ngẫu nhiên bên góc màn hình.', 'smartkid'); ?></p>
-					<?php $styles = array('Left', 'Right'); ?>
-						<select name="smartkid_settings[web53]"> 
-						<?php foreach($styles as $style) { ?> 
-						<?php if($smartkid_options['web53'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-						<option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-						<?php } ?> 
-						</select>
+					 
+                 
 					<p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Chọn vị trí hiển thị popup', 'smartkid'); ?></p>
 					
 					<label class="toggle-switch">
@@ -305,29 +285,14 @@ function smartkid_options_page() {
 					<label class="admin-label-right"><?php _e('Bật mục lục cho bài viết', 'smartkid'); ?></label>
 					<div class="admin-cum">
 					<p>
-					<?php $styles = array('Post', 'Sidebar'); ?>
-                    <select name="smartkid_settings[set31]"> 
-                    <?php foreach($styles as $style) { ?> 
-                    <?php if($smartkid_options['set31'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-                    <option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-                    <?php } ?> 
-                    </select>
+				 
                     <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Đây là chức năng tạo mục lục cho bài viết, khi bạn sử dụng các thẻ h trong bài.', 'smartkid'); ?></p>
 					</div>
 					<label class="toggle-switch">
                     <input type="checkbox" name="smartkid_settings[set4]" value="1" <?php if ( isset($smartkid_options['set4']) && 1 == $smartkid_options['set4'] ) echo 'checked="checked"'; ?> />
                     <span class="slider"></span></label>
 					<label class="admin-label-right"><?php _e('Bật code màu nổi bật', 'smartkid'); ?></label>
-					<div class="admin-cum">
-					<p>
-					<?php $styles = array('Style1', 'Style2', 'Style3', 'Style4', 'Style5', 'Style6', 'Style7', 'Style8'); ?>
-                    <select name="smartkid_settings[set41]"> 
-                    <?php foreach($styles as $style) { ?> 
-                    <?php if($smartkid_options['set41'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-                    <option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-                    <?php } ?> 
-                    </select>
-					</p>
+					<div class="admin-cum"> 
                     <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Khi bạn chia sẻ code PHP, HTML, CSS trong bài viết, chức năng này sẽ làm code nổi bật nhờ vào việc thêm màu sắc cho code.', 'smartkid'); ?></p>
 					</div>
                     <label class="toggle-switch">
@@ -348,17 +313,10 @@ function smartkid_options_page() {
 					<input placeholder="<?php _e('Nhập số giây', 'smartkid'); ?>" style="width:140px;height:40px" name="smartkid_settings[set71]" type="number" value="<?php if(!empty($smartkid_options['set71'])){echo $smartkid_options['set71'];} ?>"/>
 					</p>
                     <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Nếu bạn kích chọn chức năng này, ở trong trình soạn thảo bài viết sẽ có thêm box nhập link download và có thể sử dụng shortcode download', 'smartkid'); ?></p>
-					<p>
+					 
 					</div>
 					
-					<?php $styles = array('Style1', 'Style2', 'Style3', 'Style4', 'Style5', 'Style6', 'Style7', 'Style8', 'Style9', 'Style10', 'Style11', 'Style12', 'Style13', 'Style14'); ?>
-                    <select name="smartkid_settings[set8]"> 
-                    <?php foreach($styles as $style) { ?> 
-                    <?php if($smartkid_options['set8'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-                    <option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-                    <?php } ?> 
-                    </select>
-					</p>
+					 
                     <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Chọn kiểu hiển thị của thẻ H trong bài viết.', 'smartkid'); ?></p>
 					
 					<label class="toggle-switch">
@@ -409,39 +367,8 @@ function smartkid_options_page() {
 					<span class="slider"></span></label>
                     <label class="admin-label-right"><?php _e('Ẩn bài viết khỏi trang chủ', 'smartkid'); ?></label>
 					<p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Nếu bạn tích chọn chức năng này, bài viết chính hiển thị ở trang chủ sẽ không hiển thị.', 'smartkid'); ?></p>
-				</div>
-
-                <div class="admin-nd"> 
-                    <div class="admin-cm"><i class="fa-regular fa-bars"></i> <?php _e('Kiểu hiển thị menu', 'smartkid'); ?></div>
-                    <?php $styles = array('Menu 1', 'Menu 2', 'Menu 3', 'Menu 4', 'Menu GB 1', 'Menu GB 2', 'Top menu 1', 'Top menu 2', 'Menu popup 1'); ?>
-                    <select name="smartkid_settings[menu]"> 
-                    <?php foreach($styles as $style) { ?> 
-                    <?php if($smartkid_options['menu'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-                    <option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-                    <?php } ?> 
-                    </select>
-                    <p class="admin-pb-note"><i class="fa-regular fa-lightbulb-on"></i> <?php _e('Chọn kiểu hiển thị menu ở trên cho trang web của bạn.', 'smartkid'); ?></p>
-                </div>
-			
+				</div> 
                 
-                
-                
-                <div class="admin-nd">     
-                    <div class="admin-cm"><i class="fa-regular fa-sliders-up"></i> <?php _e('Tuỳ chọn hiển thị trang', 'smartkid'); ?></div>
-					<?php $styles = array('Page', 'More', 'Scroll'); ?>
-                    <select name="smartkid_settings[next]"> 
-                    <?php foreach($styles as $style) { ?> 
-                    <?php if($smartkid_options['next'] == $style) { $selected = 'selected="selected"'; } else { $selected = ''; } ?>
-                    <option value="<?php echo $style; ?>" <?php echo $selected; ?>><?php echo $style; ?></option> 
-                    <?php } ?> 
-                    </select>
-                    <p class="admin-pb-note">
-					<i class="fa-regular fa-lightbulb-on"></i> <?php _e('1 Page: Hiển thị nút chuyển trang dạng số.', 'smartkid'); ?><br>
-					<i class="fa-regular fa-lightbulb-on"></i> <?php _e('2 More: Hiển thị nút tải thêm bài viết.', 'smartkid'); ?><br>
-					<i class="fa-regular fa-lightbulb-on"></i> <?php _e('3 Scroll: Kéo xuống để tải thêm bài viết.', 'smartkid'); ?><br>
-					<i><?php _e('Chú ý: Tất cả các chức này chỉ hoạt động cho bài viết ở màn hình chính, các mục khác như bài viết trong chuyên mục vẫn sử dụng tải trang dạng số nhằm giúp người xem tìm kiếm bài viết hiệu quả hơn.', 'smartkid'); ?></i>
-					</p>
-                </div>
                 <div class="admin-nd">     
                     <div class="admin-cm"><i class="fa-regular fa-text-size"></i> <?php _e('Tùy chọn font chữ', 'smartkid'); ?></div>    
                     <?php $styles = array('BeVietnamPro', 'Arial', 'BeVietnamPro'); ?>

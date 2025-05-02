@@ -46,18 +46,6 @@ $current_user = wp_get_current_user(); $user_id = get_current_user_id(); global 
 			</svg>
 		</button>
 	</div>
-	<div class="iconlogin">
-	<!-- tim kiem -->
-	<form method="get" action="<?php bloginfo('url'); ?>" autocomplete="off">
-		<div class="search-mau" style="display:flex">
-			<div class="searchbg input-wrapper">
-				<input id="searchbox" placeholder="<?php _e('Nhập từ khoá tìm kiếm', 'smartkid'); ?>" type="text" name="s"  onkeyup="smartkidsearch()">
-				<label for="stuff" class="fas fa-search input-land-icon"></label>
-			</div>
-				<span id="close-search" title="<?php _e('Đóng tìm kiếm', 'smartkid'); ?>" type="submit" onclick="share(event, 'searchtop')"><i class="fa-solid fa-xmark"></i></span>
-		</div>
-	</form> 
-</div>
 </nav> 
 
 <?php  get_template_part( 'template-parts/menu/top-menu-mobile'); ?>	
