@@ -1,11 +1,7 @@
-<?php  global $wp_query;
-        $post_rank = $wp_query->current_post + 1; // Bắt đầu từ 1
-        ?>
 <div class="post-item">
     <div class="post">
         <span class="post-rank rank-gold">
-            <?php echo $post_rank; ?><span class="img-123-cat"></span>
-        </span>
+            1<span class="img-123-cat"></span> </span>
     </div>
     <div class="post-thumbnail">
         <div class="fixfreepaid-website-type-Free-Trial"> <span class="website-type-Free-Trial">
@@ -25,20 +21,13 @@
         </div>
         <p></p>
         <a class="dark-title" style="text-decoration: none;" target="_blank" href="https://www.aixploria.com/en/best-sat-score-ai/" title="Best SAT Score" rel="nofollow">
-            <p class="post-excerpt" >« Prepare for the SAT with adaptive tests, detailed explanations written by experts and personalized progress tracking. Benefit from an intelligent study plan, interactive flashcards and analyses to optimize your results »</p>
-        </a>
-        <span class="post-category">
-            <a class="tag-category-dk" href="https://www.aixploria.com/en/category/featured-en/" data-title="AIxploria Selection"><span class="hashtaga">#</span>AIxploria Selection</a> 
-            <a class="tag-category-dk" href="https://www.aixploria.com/en/category/education-en/" data-title="Education / Studies"><span class="hashtaga">#</span>Education / Studies</a>
-        </span>
+            <p class="post-excerpt" data-title="Prepare for the SAT with adaptive tests, detailed explanations written by experts and personalized progress tracking. Benefit from an intelligent study plan, interactive flashcards and analyses to optimize your results">« Prepare for the SAT with adaptive tests, detailed explanations written by experts and personalized progress tracking. Benefit from an intelligent study plan, interactive flashcards and analyses to optimize your results »</p>
+        </a><span class="post-category">
+            <a class="tag-category-dk" href="https://www.aixploria.com/en/category/featured-en/" data-title="AIxploria Selection"><span class="hashtaga">#</span>AIxploria Selection</a> <a class="tag-category-dk" href="https://www.aixploria.com/en/category/education-en/" data-title="Education / Studies"><span class="hashtaga">#</span>Education / Studies</a></span>
          
-        <div style="display: inline-flex; flex-direction: row-reverse;"> 
-            <a rel="nofollow noopener" target="_blank" href="https://www.bestsatscore.com/?via=aixploria" 
-                class="visit-site-button4 track-click" id="specialButton" >
-                <img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Link AI" title="Link AI" width="16" height="16" style="width: 16px; height: 16px; margin-right: 5px;" class="goicon"> 
-                <span data-title="Visit">Visit</span>
-            </a>
-        </div>
+        <div style="display: inline-flex;
+flex-direction: row-reverse;"> <a rel="nofollow noopener" target="_blank" href="https://www.bestsatscore.com/?via=aixploria" class="visit-site-button4 track-click" id="specialButton" >
+    <img src="https://www.aixploria.com/wp-content/uploads/2023/03/link-ai-w.webp" alt="Link AI" title="Link AI" width="16" height="16" style="width: 16px; height: 16px; margin-right: 5px;" class="goicon"> <span data-title="Visit">Visit</span></a></div>
     </div>
 </div>
 
